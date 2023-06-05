@@ -1,0 +1,32 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+
+    <title>login</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+<body style="background-color: bisque;">
+    
+</body>
+
+<center>
+   <form method="POST">
+    {% csrf_token %}
+    <h2>Login Here</h2>
+
+
+    <label for="username">username:</label>
+    <input type="text" name="username" id="username"><br><br>
+
+    <label for="password">password</label>
+    <input type="password" name="password" id="password"><br><br>
+
+
+    <input type="submit" value="user_login" class="btn btn-warning">
+   </form>
+</center>
+
+{% endblock %}

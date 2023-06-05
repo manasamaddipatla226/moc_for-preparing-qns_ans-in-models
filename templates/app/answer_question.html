@@ -1,0 +1,32 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+
+    <title>Registeration</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+<body style="background-color: aliceblue;">
+    
+</body>
+
+<center>
+    <h1>Answer the question</h1>
+
+    <h2>{{question.title}}</h2>
+    <h2>{{question.description}}</h2>
+
+
+
+    <form method="POST">
+
+        {% csrf_token %}
+        {{aqo.as_p}}
+
+        <input type="submit" value="post_A"><br><br>
+    </form>
+</center>
+
+{% endblock %}

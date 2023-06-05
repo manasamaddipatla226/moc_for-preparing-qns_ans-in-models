@@ -1,0 +1,24 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+
+    <title>Home page</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+    
+
+<center>
+    <h2 style="color:green">{{Qcl.title}}</h2><br><br>
+    {% for i in Qcl.question.all %}
+
+    <h3 style="color: ghostwhite;">{{i.description}}</h3>
+<h3 style="color: ghostwhite;">{{i.user}}</h3>
+ <h3 style="color: ghostwhite;">{{i.created_at}}</h3>
+
+    {% endfor %}
+</center>
+
+{% endblock %}

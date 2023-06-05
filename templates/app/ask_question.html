@@ -1,0 +1,28 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+
+    <title>Registeration</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+<body style="background-color:blanchedalmond">
+    
+</body>
+
+<center>
+   <h1>Ask Question</h1>
+
+   <form method="POST">
+
+    {% csrf_token %}
+
+    {{qfo.as_p}}
+
+    <input type="submit" value="Post_Q" class="btn btn-success"><br><br>
+   </form>
+</center>
+
+{% endblock %}
